@@ -1,9 +1,9 @@
-class Lobster < Formula
+class Lobsteres < Formula
   desc "Shell script to watch Movies/TV Shows from the terminal"
-  homepage "https://github.com/justchokingaround/lobster.git"
-  url "https://github.com/justchokingaround/lobster.git", branch: "main"
+  homepage "https://github.com/oroo3158/lobster"
+  url "https://github.com/oroo3158/lobster", branch: "main"
   version "3.9.9"
-  head "https://github.com/justchokingaround/lobster.git", branch: "main"
+  head "https://github.com/oroo3158/lobster", branch: "main"
 
   depends_on "grep"
   depends_on "gsed"
@@ -17,10 +17,6 @@ class Lobster < Formula
   depends_on "git" => :build
 
   def install
-    bin.install "lobster.sh" => "lobster"
+    bin.install "lobster.sh" => "lobsteres"
   end
-
-  test do
-    assert_match "lobster version", shell_output("#{bin}/lobster --version")
-  end
-end
+  

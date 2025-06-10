@@ -527,8 +527,6 @@ EOF
         if [ "$num_subs" -gt 0 ]; then
             subs_links=$(printf "%s" "$subs_links" | $sed -e "s/:/\\$path_thing:/g" -e "H;1h;\$!d;x;y/\n/$separator/" -e "s/$separator\$//")
             subs_arg="--sub-files"
-        fi
-        [ -z "$subs_links" ] && send_notification "No subtitles found"
     }
     json_from_id() {
         json_data=$(curl -s "https://decryptapi.broggl.farm/embed?embed_url=${embed_link}&referrer=https://${base}")
